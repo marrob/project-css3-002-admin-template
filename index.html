@@ -5,8 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css\font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <i class="fa fa-cog"></i>
+    <header class="header--dark">
+            <h3 class="header__title">
+                Admin Page
+            </h3>
+    <!--  
+        Hozz létre egy kereső űrlapot a header jobb oldalán.
+        Ez egy div legyen, "header__search" oszállyal.
+        Inline legyen megjelenítve.
+    -->
+        <form class="header__search">
+            <!--
+                Az input elem oszálya "search__input" legyen.
+                Legyen a bal felős és a jobb alsó sarka 4 pixelre lekerekítve.
+                A jobb bal padding 0.75, a felső alsó 0.375 legyen a roothoz viszonyítva.
+                A betűmérete 1.2 legyen a roothoz viszonyítva.
+                A szegély színére állíts be egy áttünést, ami .15 másodpercig tart.
+                Ha megkapja a fókuszt, akkor a szegély színe 128,189,255 legyen.
+            -->
+            <input type="text" class="search__input">
+            <!--
+                A gomb elem oszálya "search__btn" legyen.
+                A gomb háttérszíne 0,123,255 legyen.
+                A nagyító ikont keresd meg a font-awesome ikonon között és jelenítsd meg a gomb közepén a minta alapján.
+            -->
+            <button type="button" class="search__btn">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </form>
+    </header>
+    <!--
+        Hozd létre main elemet, a header alá. 
+        Legyen benne egy aside elem.
+        Mellette egy section elem, "content" oszállyal.
+    -->
+    <main>
+        <!--
+            Legyen benne egy nav elem, "main__nav" oszállyal.
+            Legyen a háttérszíne 33,37,41
+            Legyen benne egy ul elem, "nav__ul" osztállyal.
+        -->
+        <aside>
+            <nav class="main__nav">
+                <!--
+                    Legyen benne 8 li elem.
+                -->
+                <ul class="nav__ul">
+                    <li> CORE </li>
+                    <li> <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard </li>
+                    <li> INTEFACE </li>
+                    <li> <i class="fa fa-windows" aria-hidden="true"></i> Layouts </li>
+                    <li> <i class="fa fa-bookmark" aria-hidden="true"></i>Pages </li>
+                    <li> ADDONS </li>
+                    <li> <i class="fa fa-area-chart" aria-hidden="true"></i> Charts </li>
+                    <li> <i class="fa fa-table" aria-hidden="true"></i> Tablers </li>
+                </ul>
+            </nav>
+        </aside>
+        <!--
+            Legyen a tetején h1 elem "Dashboard" tartalommal.
+        -->
+        <section class="content">
+            <h1>Dashboard</h1>
+            <!--
+                Alatta legyen egy breadcrumb, ez egy div legyen, "main__breadcrumb" osztállyal.
+                Háttérszíne 233,236,239 legyen.
+                A szegély lekerekítése .25 legyen a roothoz képest.
+                A felirat benne szintén "Dashboard" legyen.
+                A padding fent lent 1, jobb bal oldalon 1.5 legyen a roothoz képest.
+            -->
+            <div class="main__breadcrumb">
+                Dashboard
+            </div>
+            <div class="main__cards">
+                <!--
+                    A main__card divek legyen elosztva két további div -re, ezek osztályai "card__top" és "card__bottom" legyenek.
+                    A felsőnek a felső, az alsónak az alsó sarkai legyenek lekerekítve .25 -re a roothoz képest.
+                -->
+                <!--main__card--blue: háttérszín 0,123,255-->
+                <div class="main__card main__card--blue">
+                    <div class="card__top">Primary Card</div>
+                    <div class="card__bottom">View Deatils</div>
+                </div>
+                <div class="main__card main__card--yellow">
+                    <div class="card__top">Warning Card</div>
+                    <div class="card__bottom">View Details</div>
+                </div>
+                <div class="main__card main__card--green">
+                    <div class="card__top">Success Card</div>
+                    <div class="card__bottom">View Details</div>
+                </div>
+                <div class="main__card main__card--red">
+                    <div class="card__top">Danger Card</div>
+                    <div class="card__bottom">View Details</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
 </body>
 </html>
