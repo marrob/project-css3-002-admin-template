@@ -162,7 +162,7 @@
 }
 
 .main__card{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content:space-between;
     color: var(--fore_color);
